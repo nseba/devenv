@@ -11,5 +11,7 @@ ln -s "$(pwd)/tmux" ~/.config/tmux
 # Setup alacritty configuration
 rm -rf ~/.config/alacritty
 ln -s "$(pwd)/alacritty" ~/.config/alacritty
-
+# Setup k9s configuration
+rm -rf ~/.config/k9s
+ln -s "$(pwd)/k9s" ~/.config/k9s
 
