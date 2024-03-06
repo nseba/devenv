@@ -15,3 +15,12 @@ ln -s "$(pwd)/alacritty" ~/.config/alacritty
 rm -rf ~/.config/k9s
 ln -s "$(pwd)/k9s" ~/.config/k9s
 
+# Setup various other configurations
+#
+# zsh configuration
+# Setup aliases
+#
+# ide - opens a tmux/neovim IDE layout on the current directory
+$(alias | grep ide=\'tmux) || echo "alias ide='tmux new-session -d '\''nvim .'\''; tmux split-window -h';' attach'" >> ~/.zshrc 
+# vim - opens nvim instead of vim
+$(alias | grep vim=\'vim) || echo "alias vim='nvim'" >> ~/.zshrc
