@@ -1,6 +1,13 @@
+# Development environment config
+
+This is my development environment setup. It is based on various resources, albeit with my personal
+preferences/modifications.
+
 # Neovim Config
 
-Welcome to my NeoVim config. Use it for inspiration.
+This is my Neovim config. It is based on the [radleylewis](https://github.com/radleylewis/nvim)
+configuration. If you don't know what nvim is or how to use it, I reccomend following his tutorial
+and setting it up - [https://www.youtube.com/watch?v=ZjMzBd1Dqz8](https://www.youtube.com/watch?v=ZjMzBd1Dqz8)
 
 ## plugins
 
