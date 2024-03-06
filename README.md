@@ -9,37 +9,25 @@ This is my Neovim config. It is based on the [radleylewis](https://github.com/ra
 configuration. If you don't know what nvim is or how to use it, I reccomend following his tutorial
 and setting it up - [https://www.youtube.com/watch?v=ZjMzBd1Dqz8](https://www.youtube.com/watch?v=ZjMzBd1Dqz8)
 
-## plugins
+# alacritty Config
 
-[lazy.nvim](https://github.com/folke/lazy.nvim) - Plugin manager  
-[comment.nvim](https://github.com/numToStr/Comment.nvim) - Commenting  
-[copilot](https://github.com/zbirenbaum/copilot.lua) - Github copilot integration  
-[gitsigns](https://github.com/lewis6991/gitsigns.nvim) - Git status signs  
-[indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim) - Indentation UI  
-[leap](https://github.com/ggandor/leap.nvim) - Quick navigation in viewable text  
-[lspconfig](https://github.com/neovim/nvim-lspconfig) - Language Server Protocol support  
-[lspsaga](https://github.com/glepnir/lspsaga.nvim) - Enhanced LSP support  
-[lualine](https://github.com/nvim-lualine/lualine.nvim) - Statusline  
-[mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim) - Better mason and lsp-config integration  
-[efm-langserver](https://github.com/mattn/efm-langserver) - Linting and Formatting  
-[mason](https://github.com/williamboman/mason.nvim) - LSP installation management  
-[catppuccin](https://github.com/morhetz/gruvbo) - catppuccin colourscheme  
-[noice](https://github.com/folke/noice.nvim) - vim commandline ui  
-[nvim-autopairs](https://github.com/windwp/nvim-autopairs) - autopair completion  
-[nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - auto-completion support  
-[nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) - file tree explorer  
-[nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) - file icons  
-[telescope](https://github.com/nvim-telescope/telescope.nvim) - fuzzy finder  
-[tmux-navigator](https;//github.com/christoomey/vim-tmux-navigator) - tmux window navigation  
-[trouble](https://github.com/folke/trouble.nvim) - diagnostics  
-[vim-illuminate](https://github.com/RRethy/vim-illuminate) - illuminates instances of word under cursor  
-[whichkey](https://github.com/folke/which-key.nvim) - shortcut hints  
-[hardtime.nvim](https://github.com/m4xshen/hardtime.nvim) - establish better vim habits  
+This is the configuration for alacritty. The basis is the tutorial from radleylewis, but changed 
+to toml (since alacrity does not support yaml configuration anymore).
 
-## neovim version supported
+# tmux config
 
-^0.9.0
+The tmux configuration based also on the tutorial from radleylewis.
 
-## author
+# k9s config
 
-Radley E. Sidwell-Lewis
+My k9s configuration. It features an extra plugin for pretty formatting of pino logs.
+
+# install.sh
+
+A one-step installation script that I use to setup the entire configuration above.
+This basically sets up the various configurations under `~/.config` and also installs a few 
+packages using `brew`. This is designed to work on macOS, but feel free to take it and adjust it
+to other *nix environments.
+
+*NOTE* Currently this is just a part of my whole setup. I will come back and add more settings and
+tools over time, to match my entire installation.
