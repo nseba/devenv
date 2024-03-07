@@ -56,3 +56,10 @@ api.nvim_set_keymap("n", "<leader>za", ":TZAtaraxis<CR>", {})
 -- Comments
 api.nvim_set_keymap("n", "<C-/>", "gtc", { noremap = false })
 api.nvim_set_keymap("v", "<C-/>", "goc", { noremap = false })
+api.nvim_set_keymap("n", "<leader>/", "gtc", { noremap = false })
+api.nvim_set_keymap("v", "<leader>/", "goc", { noremap = false })
+
+api.nvim_set_keymap("n", "<C-?>", "gtb", { noremap = false })
+api.nvim_set_keymap("v", "<C-?>", "gob", { noremap = false })
+api.nvim_set_keymap("n", "<leader>?", "gtb", { noremap = false })
+api.nvim_set_keymap("v", "<leader>?", "gob", { noremap = false })
