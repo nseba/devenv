@@ -1,8 +1,10 @@
+#!/usr/bin/env bash
+
 brew tap homebrew/cask-fonts
 brew install --cask font-mononoki-nerd-font
 brew install luarocks
 brew install tmux
-# Setup nvim configuration 
+# Setup nvim configuration
 rm -rf ~/.config/nvim
 ln -s "$(pwd)/nvim" ~/.config/nvim
 # Setup tmux configuration
@@ -19,8 +21,19 @@ ln -s "$(pwd)/k9s" ~/.config/k9s
 #
 # zsh configuration
 # Setup aliases
-#
+cat <<EOF >~/bin/ide.sh
+#!/usr/bin/env bash
+if [[ -z "$$TMUX" ]]; then
+  echo "Not in a tmux session. Starting a new one."
+  tmux new-session -Ad -s ide 
+fi
+tmux send-keys -t ide 'nvim .' Enter
+tmux split-window -d -t ide
+tmux select-layout -t ide main-horizontal
+tmux attach-session -t ide
+EOF
 # ide - opens a tmux/neovim IDE layout on the current directory
-$(alias | grep ide=\'tmux) || echo "alias ide='tmux new-session -d '\''nvim .'\''; tmux split-window -h';' attach'" >> ~/.zshrc 
+chmod +x ~/bin/ide.sh
+$(alias | grep ide=\'tmux) || echo "alias ide='~/bin/ide.sh'" >>~/.zshrc
 # vim - opens nvim instead of vim
-$(alias | grep vim=\'vim) || echo "alias vim='nvim'" >> ~/.zshrc
+$(alias | grep vim=\'vim) || echo "alias vim='nvim'" >>~/.zshrc

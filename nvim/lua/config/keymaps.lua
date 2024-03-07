@@ -63,3 +63,8 @@ api.nvim_set_keymap("n", "<C-?>", "gtb", { noremap = false })
 api.nvim_set_keymap("v", "<C-?>", "gob", { noremap = false })
 api.nvim_set_keymap("n", "<leader>?", "gtb", { noremap = false })
 api.nvim_set_keymap("v", "<leader>?", "gob", { noremap = false })
+
+-- LLM
+api.nvim_set_keymap("n", "<leader>]", ":Gen<CR>", {})
+api.nvim_set_keymap("v", "<leader>]", ":Gen<CR>", {})
+
