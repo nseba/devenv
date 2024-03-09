@@ -23,17 +23,17 @@ ln -s "$(pwd)/k9s" ~/.config/k9s
 # Setup aliases
 cat <<EOF >~/bin/ide.sh
 #!/usr/bin/env bash
-if [[ -z "$$TMUX" ]]; then
+if [[ -z "\$TMUX" ]]; then
   echo "Not in a tmux session. Starting a new one."
-  tmux new-session -Ad -s ide 
+  tmux new-session -Ad 
 fi
-tmux send-keys -t ide 'nvim .' Enter
-tmux split-window -d -t ide
-tmux select-layout -t ide main-horizontal
-tmux attach-session -t ide
+tmux send-keys 'nvim .' Enter
+tmux split-window -d 
+tmux select-layout main-horizontal
+tmux attach-session 
 EOF
 # ide - opens a tmux/neovim IDE layout on the current directory
 chmod +x ~/bin/ide.sh
-$(alias | grep ide=\'tmux) || echo "alias ide='~/bin/ide.sh'" >>~/.zshrc
+$(alias | grep "ide=\'~/bin/ide.sh") || echo "alias ide='~/bin/ide.sh'" >>~/.zshrc
 # vim - opens nvim instead of vim
-$(alias | grep vim=\'vim) || echo "alias vim='nvim'" >>~/.zshrc
+$(alias | grep "vim=\'vim") || echo "alias vim='nvim'" >>~/.zshrc
